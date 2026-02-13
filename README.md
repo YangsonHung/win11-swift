@@ -1,114 +1,118 @@
 # Win11 Desktop Simulator
 
-使用 SwiftUI 开发的原生 macOS 应用，模拟 Windows 11 桌面系统。
+A native macOS application that simulates the Windows 11 desktop environment, built with SwiftUI.
 
-## 功能特性
+![Screenshot](example.jpg)
 
-### 桌面环境
-- Windows 11 风格桌面背景
-- 可交互的桌面图标（双击打开应用）
-- 任务栏（开始按钮、应用图标、时间显示）
-- 开始菜单（搜索框、固定应用、电源按钮）
+**English** | [中文](README.zh-CN.md)
 
-### 窗口管理
-- 可拖拽窗口
-- 最小化/最大化/关闭功能
-- 窗口阴影和圆角效果
+## Features
 
-### 内置应用
+### Desktop Environment
+- Windows 11 style desktop wallpaper
+- Interactive desktop icons (double-click to open apps)
+- Taskbar (Start button, app icons, time display)
+- Start Menu (search box, pinned apps, power button)
 
-| 应用 | 功能 |
-|------|------|
-| Microsoft Edge (浏览器) | 访问网络、前进、后退、刷新 |
-| File Explorer (文件资源管理器) | 浏览文件和文件夹 |
-| Notepad (记事本) | 文本编辑、保存文件 |
-| Settings (设置) | Windows 11 风格设置界面 |
-| Calculator (计算器) | 完整计算器功能 |
+### Window Management
+- Draggable windows
+- Minimize/Maximize/Close functionality
+- Window shadows and rounded corners
 
-## 技术栈
+### Built-in Apps
 
-- **UI 框架**: SwiftUI + AppKit
-- **浏览器**: WKWebView (WebKit)
-- **构建工具**: XcodeGen
+| App | Features |
+|-----|----------|
+| Microsoft Edge (Browser) | Web browsing, forward, back, refresh |
+| File Explorer | Browse files and folders |
+| Notepad | Text editing, file saving |
+| Settings | Windows 11 style settings interface |
+| Calculator | Full calculator functionality |
 
-## 项目结构
+## Tech Stack
+
+- **UI Framework**: SwiftUI + AppKit
+- **Browser**: WKWebView (WebKit)
+- **Build Tool**: XcodeGen
+
+## Project Structure
 
 ```
 win11-swift/
-├── project.yml                    # XcodeGen 配置
+├── project.yml                    # XcodeGen configuration
 ├── Win11Desktop/
 │   ├── App/
-│   │   ├── Win11DesktopApp.swift  # 应用入口
-│   │   └── AppDelegate.swift       # 应用代理
+│   │   ├── Win11DesktopApp.swift  # App entry point
+│   │   └── AppDelegate.swift       # App delegate
 │   ├── Models/
-│   │   ├── AppState.swift          # 全局状态管理
-│   │   └── DesktopIcon.swift       # 桌面图标模型
+│   │   ├── AppState.swift          # Global state management
+│   │   └── DesktopIcon.swift       # Desktop icon model
 │   ├── Views/
 │   │   ├── Desktop/
-│   │   │   ├── DesktopView.swift   # 桌面主视图
+│   │   │   ├── DesktopView.swift   # Desktop main view
 │   │   │   └── DesktopIconView.swift
 │   │   ├── Taskbar/
-│   │   │   ├── TaskbarView.swift   # 任务栏
-│   │   │   └── StartMenuView.swift # 开始菜单
+│   │   │   ├── TaskbarView.swift   # Taskbar
+│   │   │   └── StartMenuView.swift # Start menu
 │   │   ├── Windows/
-│   │   │   └── DraggableWindow.swift # 可拖拽窗口
+│   │   │   └── DraggableWindow.swift # Draggable window
 │   │   └── Apps/
-│   │       ├── BrowserView.swift   # 浏览器
-│   │       ├── ExplorerView.swift  # 文件资源管理器
-│   │       ├── NotepadView.swift   # 记事本
-│   │       ├── SettingsView.swift  # 设置
-│   │       └── CalculatorView.swift # 计算器
+│   │       ├── BrowserView.swift   # Browser
+│   │       ├── ExplorerView.swift  # File Explorer
+│   │       ├── NotepadView.swift   # Notepad
+│   │       ├── SettingsView.swift  # Settings
+│   │       └── CalculatorView.swift # Calculator
 │   └── Resources/
-│       └── Assets.xcassets         # 应用图标
+│       └── Assets.xcassets         # App icons
 ```
 
-## 快速开始
+## Quick Start
 
-### 环境要求
-- macOS 13.0 或更高版本
-- Xcode 15.0 或更高版本
+### Requirements
+- macOS 13.0 or higher
+- Xcode 15.0 or higher
 
-### 构建步骤
+### Build Steps
 
-1. 克隆项目并进入目录:
+1. Clone the project and navigate to the directory:
    ```bash
    cd win11-swift
    ```
 
-2. 使用 XcodeGen 生成项目:
+2. Generate the Xcode project with XcodeGen:
    ```bash
    xcodegen generate
    ```
 
-3. 在 Xcode 中打开项目:
+3. Open the project in Xcode:
    ```bash
    open Win11Desktop.xcodeproj
    ```
 
-4. 按 `Cmd + R` 运行应用
+4. Press `Cmd + R` to run the app
 
-### 直接运行
+### Running Directly
 
-构建产物位于:
+The built app is located at:
 ```
 ~/Library/Developer/Xcode/DerivedData/Win11Desktop-*/Build/Products/Debug/Win11 Desktop.app
 ```
 
-## 使用说明
+## Usage
 
-1. **打开应用**: 点击开始按钮或双击桌面图标
-2. **切换应用**: 点击任务栏上的应用图标
-3. **关闭窗口**: 点击窗口右上角的关闭按钮
-4. **移动窗口**: 拖拽窗口标题栏
-5. **浏览器操作**: 在地址栏输入 URL，按 Enter 访问
-6. **记事本保存**: 点击 File -> Save 保存文件
+1. **Open Apps**: Click the Start button or double-click desktop icons
+2. **Switch Apps**: Click app icons on the taskbar
+3. **Close Window**: Click the close button in the top-right corner
+4. **Move Window**: Drag the window title bar
+5. **Browser**: Enter a URL in the address bar and press Enter
+6. **Notepad**: Click File -> Save to save files
 
-## 注意事项
+## Notes
 
-- 浏览器需要网络连接才能访问网站
-- 记事本保存功能会打开系统保存对话框
-- 应用设置为 accessory 模式，作为桌面模拟器运行
+- Browser requires network connection to access websites
+- Notepad save functionality opens the system save dialog
+- The app runs in accessory mode as a desktop simulator
 
-## 许可证
+## License
 
 MIT License
