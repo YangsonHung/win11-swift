@@ -2,7 +2,7 @@
 
 A native macOS application that simulates the Windows 11 desktop environment, built with SwiftUI.
 
-![Screenshot](ui-view.jpg)
+![Screenshot](example.jpg)
 
 **English** | [中文](README.zh-CN.md)
 
