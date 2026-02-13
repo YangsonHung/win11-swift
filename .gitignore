@@ -1,0 +1,29 @@
+# Xcode
+.DS_Store
+build/
+DerivedData/
+*.xcuserstate
+*.xcuserdatad
+xcuserdata/
+*.xcworkspace
+!default.xcworkspace
+
+# XcodeGen
+*.xcodeproj
+!default.xcodeproj
+
+# App
+*.app
+*.dmg
+
+# Swift
+.swiftpm/
+*.playground
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+
+# Misc
+*.log
