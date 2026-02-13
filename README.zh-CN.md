@@ -4,7 +4,7 @@
 
 使用 SwiftUI 开发的原生 macOS 应用，模拟 Windows 11 桌面系统。
 
-![Screenshot](example.jpg)
+![Screenshot](ui-view.jpg)
 
 ## 功能特性
 
